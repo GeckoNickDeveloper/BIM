@@ -1,6 +1,13 @@
 #include <stdio.h>
 
+#include "../src/color.h"
+#include "../src/bitmap.h"
+
 int main(void)
 {
-	/** @todo per prove future */
+	image_t img;
+
+	img = read_bitmap("bim_test.bmp");
+
+	return 0;
 }
