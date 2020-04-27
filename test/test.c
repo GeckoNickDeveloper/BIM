@@ -7,7 +7,7 @@ int main(void)
 {
 	image_t img;
 
-	img = read_bitmap("bim_test.bmp");
+	img = read_bitmap("bim_test.xbm");
 
 	return 0;
 }

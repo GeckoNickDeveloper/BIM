@@ -11,12 +11,17 @@ typedef struct rgb
 	uint8_t b;	/* Color Component >> BLUE	*/
 } rgb_t;
 
-typedef struct image
+/* Color Model YCbCr */
+typedef struct ycc
 {
-	rgb_t**		matrix;
-	uint32_t	width;
-	uint32_t	height;
-} image_t;
+	uint8_t y;	/* Color Component >> LUMA						*/
+	int8_t	cb;	/* Color Component >> BLUE-DIFFERENCE CHROMA	*/
+	int8_t	cr;	/* Color Component >> RED-DIFFERENCE CHROMA		*/
+} ycc_t;
+
+/* Convertions */
+extern ycc_t rgb2ycc(rgb_t c);
+extern rgb_t ycc2rgb(ycc_t c);
 
 /* Negative of a RGB color */
 extern rgb_t negative(rgb_t c);
