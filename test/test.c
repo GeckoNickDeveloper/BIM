@@ -1,13 +1,23 @@
 #include <stdio.h>
 
-#include "../src/color.h"
-#include "../src/bitmap.h"
+/*#include "../src/color.h"
+#include "../src/jpeg.h"*/
 
 int main(void)
 {
-	image_t img;
+	FILE* f;
+	f = fopen("./img/wgimp.jpg", "r");
 
-	img = read_bitmap("bim_test.xbm");
+	int i;
+
+	for (i = 0; i < 256; i++)
+	{
+		char c;
+		fread(&c, 1, 1, f);
+		printf("%d\t>> %x\n\n", i, c & 0xFF);
+	}
+
+	fclose(f);
 
 	return 0;
 }

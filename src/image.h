@@ -13,19 +13,14 @@
 typedef struct rgbimage
 {
 	rgb_t**		matrix;
-	uint32_t	width;
-	uint32_t	height;
+	uint16_t	width;
+	uint16_t	height;
 } rgb_i;
 
-/* Uncompressed YCC Image Structure */
-typedef struct yccimage
-{
-	ycc_t**		matrix;
-	uint32_t	width;
-	uint32_t	height;
-} ycc_i;
+/* smoothing = (1/K) sum from {i = 0} to { mask^2} {z_i} */
+/* sharpening = f(x+1, y) + f(x-1, y) + f(x, y+1) + f(x, y-1) - 4f(x, y) */
 
-extern ycc_i rgbi2ycci(rgb_i img);
-extern rgb_i ycci2rgbi(ycc_i img);
+extern void smooting(rgb_i *img, uint8_t mSize);
+extern void sharpening(rgb_i *img, float force);
 
 #endif /* IMAGE_H */
