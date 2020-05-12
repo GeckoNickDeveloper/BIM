@@ -68,11 +68,11 @@ void smooting(rgb_i *img, uint8_t mSize)
 		}
 };
 
-void sharpening(rgb_i *img, float force)
+void sharpening(rgb_i *img, double force)
 {
 	int i,j,x,y;
 	rgb_i* original;
-	float kernel[3][3] =	{
+	double kernel[3][3] =	{
 								{0, ((-1.0) * force), 0 },
 								{((-1.0) * force), ((4.0) * force),	((-1.0) * force) },
 								{0,	((-1.0) * force), 0}
@@ -83,14 +83,13 @@ void sharpening(rgb_i *img, float force)
 							 * [-1] [ 4] [-1]
 							 * [ 0] [-1] [ 0]
 							 *
-							
-							/*
+							 *
 							 * [-1] [-1] [-1]
 							 * [-1] [ 8] [-1]
 							 * [-1] [-1] [-1]
 							 */
 
-	float r,g,b;
+	double r,g,b;
 
 	original = clone(img);
 
@@ -101,9 +100,9 @@ void sharpening(rgb_i *img, float force)
 			for (y = -1; y < 2; y++)
 				for (x = -1; x < 2; x++)
 				{
-					r += kernel[y + 1][x + 1] * ((float) original->matrix[i + y][j + x].r / 255); /* [/ 255] is for normalization */
-					g += kernel[y + 1][x + 1] * ((float) original->matrix[i + y][j + x].g / 255); /* [/ 255] is for normalization */
-					b += kernel[y + 1][x + 1] * ((float) original->matrix[i + y][j + x].b / 255); /* [/ 255] is for normalization */
+					r += kernel[y + 1][x + 1] * ((double) original->matrix[i + y][j + x].r / 255); /* [/ 255] is for normalization */
+					g += kernel[y + 1][x + 1] * ((double) original->matrix[i + y][j + x].g / 255); /* [/ 255] is for normalization */
+					b += kernel[y + 1][x + 1] * ((double) original->matrix[i + y][j + x].b / 255); /* [/ 255] is for normalization */
 				}
 			
 			img->matrix[i][j].r += ((r > 1.0) ? 1.0 : ((r < 0.0) ? 0.0 : r)) * 255;

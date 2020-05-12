@@ -21,6 +21,6 @@ typedef struct rgbimage
 /* sharpening = f(x+1, y) + f(x-1, y) + f(x, y+1) + f(x, y-1) - 4f(x, y) */
 
 extern void smooting(rgb_i *img, uint8_t mSize);
-extern void sharpening(rgb_i *img, float force);
+extern void sharpening(rgb_i *img, double force);
 
 #endif /* IMAGE_H */
