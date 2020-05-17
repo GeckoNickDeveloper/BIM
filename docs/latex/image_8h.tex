@@ -1,0 +1,80 @@
+\hypertarget{image_8h}{}\doxysection{/home/nick/\+Scrivania/\+Esami/\+B\+I\+M/src/image.h File Reference}
+\label{image_8h}\index{/home/nick/Scrivania/Esami/BIM/src/image.h@{/home/nick/Scrivania/Esami/BIM/src/image.h}}
+
+
+Header File for image manipulation.  
+
+
+{\ttfamily \#include \char`\"{}color.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrgbimage}{rgbimage}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{image_8h_a0e3ad9d2703af1a777994908aa89b1aa}\label{image_8h_a0e3ad9d2703af1a777994908aa89b1aa}} 
+typedef struct \mbox{\hyperlink{structrgbimage}{rgbimage}} \mbox{\hyperlink{image_8h_a0e3ad9d2703af1a777994908aa89b1aa}{rgb\+\_\+i}}
+\begin{DoxyCompactList}\small\item\em Data structure for rappresent uncompressed image data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{image_8h_ac478529ca0077c9ed3124f7e4db6d1c5}{smooting}} (\mbox{\hyperlink{image_8h_a0e3ad9d2703af1a777994908aa89b1aa}{rgb\+\_\+i}} $\ast$img, uint8\+\_\+t m\+Size)
+\begin{DoxyCompactList}\small\item\em Smooth an image with a given mask size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{image_8h_a16b3ebb2a4a6d62cc0b9715f82ae04d8}{sharpening}} (\mbox{\hyperlink{image_8h_a0e3ad9d2703af1a777994908aa89b1aa}{rgb\+\_\+i}} $\ast$img, double force)
+\begin{DoxyCompactList}\small\item\em Sharpen an image with a given force. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header File for image manipulation. 
+
+\begin{DoxyAuthor}{Author}
+Nicholas Kania 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2020-\/05-\/15
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{image_8h_a16b3ebb2a4a6d62cc0b9715f82ae04d8}\label{image_8h_a16b3ebb2a4a6d62cc0b9715f82ae04d8}} 
+\index{image.h@{image.h}!sharpening@{sharpening}}
+\index{sharpening@{sharpening}!image.h@{image.h}}
+\doxysubsubsection{\texorpdfstring{sharpening()}{sharpening()}}
+{\footnotesize\ttfamily void sharpening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{image_8h_a0e3ad9d2703af1a777994908aa89b1aa}{rgb\+\_\+i}} $\ast$}]{img,  }\item[{double}]{force }\end{DoxyParamCaption})}
+
+
+
+Sharpen an image with a given force. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & Image to be smoothed \\
+\hline
+{\em force} & Force of the sharpening \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{image_8h_ac478529ca0077c9ed3124f7e4db6d1c5}\label{image_8h_ac478529ca0077c9ed3124f7e4db6d1c5}} 
+\index{image.h@{image.h}!smooting@{smooting}}
+\index{smooting@{smooting}!image.h@{image.h}}
+\doxysubsubsection{\texorpdfstring{smooting()}{smooting()}}
+{\footnotesize\ttfamily void smooting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{image_8h_a0e3ad9d2703af1a777994908aa89b1aa}{rgb\+\_\+i}} $\ast$}]{img,  }\item[{uint8\+\_\+t}]{m\+Size }\end{DoxyParamCaption})}
+
+
+
+Smooth an image with a given mask size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & Image to be smoothed \\
+\hline
+{\em m\+Size} & Size of the smoothing mask \\
+\hline
+\end{DoxyParams}

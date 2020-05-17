@@ -1,0 +1,70 @@
+\hypertarget{ppm_8h}{}\doxysection{/home/nick/\+Scrivania/\+Esami/\+B\+I\+M/src/ppm.h File Reference}
+\label{ppm_8h}\index{/home/nick/Scrivania/Esami/BIM/src/ppm.h@{/home/nick/Scrivania/Esami/BIM/src/ppm.h}}
+
+
+Header File for read and write P\+PM files.  
+
+
+{\ttfamily \#include \char`\"{}image.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{image_8h_a0e3ad9d2703af1a777994908aa89b1aa}{rgb\+\_\+i}} $\ast$ \mbox{\hyperlink{ppm_8h_a13beb1c03ab1c9fb269a4023203cdd76}{read\+P\+PM}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Read a P\+PM file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ppm_8h_a2018d1022aa4a3d12f2e27aa861e729f}{write\+P\+PM}} (const char $\ast$filename, \mbox{\hyperlink{image_8h_a0e3ad9d2703af1a777994908aa89b1aa}{rgb\+\_\+i}} $\ast$img)
+\begin{DoxyCompactList}\small\item\em Write a P\+PM file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header File for read and write P\+PM files. 
+
+\begin{DoxyAuthor}{Author}
+Nicholas Kania 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2020-\/05-\/15
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ppm_8h_a13beb1c03ab1c9fb269a4023203cdd76}\label{ppm_8h_a13beb1c03ab1c9fb269a4023203cdd76}} 
+\index{ppm.h@{ppm.h}!readPPM@{readPPM}}
+\index{readPPM@{readPPM}!ppm.h@{ppm.h}}
+\doxysubsubsection{\texorpdfstring{readPPM()}{readPPM()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{image_8h_a0e3ad9d2703af1a777994908aa89b1aa}{rgb\+\_\+i}}$\ast$ read\+P\+PM (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Read a P\+PM file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the P\+PM file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rgb\+\_\+i$\ast$ Image structure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ppm_8h_a2018d1022aa4a3d12f2e27aa861e729f}\label{ppm_8h_a2018d1022aa4a3d12f2e27aa861e729f}} 
+\index{ppm.h@{ppm.h}!writePPM@{writePPM}}
+\index{writePPM@{writePPM}!ppm.h@{ppm.h}}
+\doxysubsubsection{\texorpdfstring{writePPM()}{writePPM()}}
+{\footnotesize\ttfamily void write\+P\+PM (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{\mbox{\hyperlink{image_8h_a0e3ad9d2703af1a777994908aa89b1aa}{rgb\+\_\+i}} $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+Write a P\+PM file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the P\+PM file \\
+\hline
+{\em img} & Image to be written \\
+\hline
+\end{DoxyParams}
