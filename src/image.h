@@ -1,3 +1,13 @@
+/**
+ * @file		image.h
+ * @author		Nicholas Kania
+ * @brief		Header File for image manipulation
+ * @version		0.1
+ * @date		2020-05-15
+ * 
+ * @copyright	Copyright (c) 2020
+ */
+
 #ifndef IMAGE_H
 #define IMAGE_H
 
@@ -9,18 +19,41 @@
  * images are defined <color model>_i, where i stands for <image>
  */
 
-/* Uncompressed RGB Image Structure */
+/**
+ * @struct		rgbimage
+ * @typedef		rgb_i
+ * @brief		Data structure for rappresent uncompressed image data
+ */
 typedef struct rgbimage
 {
-	rgb_t**		matrix;
-	uint16_t	width;
-	uint16_t	height;
+	rgb_t**		matrix;	/** @property	matrix	 Image Pixel Matrix	*/
+	uint16_t	width;	/** @property	width	 Image Width			*/
+	uint16_t	height;	/** @property	height	 Image Height			*/
 } rgb_i;
 
-/* smoothing = (1/K) sum from {i = 0} to { mask^2} {z_i} */
-/* sharpening = f(x+1, y) + f(x-1, y) + f(x, y+1) + f(x, y-1) - 4f(x, y) */
-
+/**
+ * @fn			void smooting(rgb_i *img, uint8_t mSize);
+ * @param		img		Image to be smoothed
+ * @param		mSize	Size of the smoothing mask
+ * 
+ * @brief		Smooth an image with a given mask size
+ */
 extern void smooting(rgb_i *img, uint8_t mSize);
+/**
+ * @fn			void sharpening(rgb_i *img, double force);
+ * @param		img		Image to be smoothed
+ * @param		force	Force of the sharpening
+ * 
+ * @brief		Sharpen an image with a given force
+ */
 extern void sharpening(rgb_i *img, double force);
+/**
+ * @fn			void complementar(rgb_i *img);
+ * @param		img		Image to be modifyed
+ * 
+ * @brief		Create the negative of the image
+ */
+extern void complementar(rgb_i *img);
+
 
 #endif /* IMAGE_H */

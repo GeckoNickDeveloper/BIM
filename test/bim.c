@@ -18,7 +18,9 @@ int main(void)
 	
 	sharpening(img, 0.5);
 
-	writePPM(SHARP, img);
+	complementar(img);
+
+	writePPM(SMOOTH, img);
 
 	return 0;
 }

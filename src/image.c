@@ -110,3 +110,11 @@ void sharpening(rgb_i *img, double force)
 			img->matrix[i][j].b += ((b > 1.0) ? 1.0 : ((b < 0.0) ? 0.0 : b)) * 255;
 		}
 };
+
+void complementar(rgb_i *img)
+{
+	int i,j;
+	for (i = 0; i < img->height; i++)
+		for (j = 0; j < img->width; j++)
+			img->matrix[i][j] = negative(img->matrix[i][j]);
+};
