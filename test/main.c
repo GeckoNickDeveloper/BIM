@@ -11,7 +11,7 @@
 #define LADYMARIA		"./img/ladymaria.ppm"
 #define FORHONOR		"./img/forhonor.ppm"
 #define HOLLOWKNIGHT	"./img/hollowknight.ppm"
-#define OUTPUT			"./img/output/default.ppm"
+#define OUTPUT			"./img/output.ppm"
 
 int leggi_range(int min, int max);
 int leggi_intero();
