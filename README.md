@@ -1,2 +1,2 @@
 # BIM
-Basic Image Manipulation
+Basic Image Manipulation is an universitary project
